@@ -1,12 +1,19 @@
-/* Steps:
-    */
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var possibleChars = "";
 // Write password to the #password input
 function generatePassword() {
-  prompt("Password length? Choose 8-128.");
+  var passwordLength = prompt("Password length? Choose 8-128.");
+  var possibleChars = "";
+
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Please choose a number between 8-128");
+    return generatePassword(); //This fixed the bug where the 'confirm(s)' was running multiple times due to incorrect requirement inputs.
+  }
+
+  inclusions();
+
+  function inclusions() {
+
   var includeLowercase = confirm("Include lowercase?");
   var includeUppercase = confirm("Include Uppercase?");
   var includeNumeric = confirm("Include numbers?");
@@ -25,13 +32,18 @@ function generatePassword() {
   }
 
   if (includeSpecial) { //didnt include space because alot of websites dont allow spaces to be used in passwords
-    possibleChars += "()*+,-./:;<=>?@[\]^_`{|}~"
+    possibleChars += "()*+,-./:;<=>?@[\]^_`{|}~";
   }
+
+  if (possibleChars === "") {
+    alert("Please include at least one of the character types.");
+    inclusions();
+  }
+ }
 }
 
 function writePassword() {
-  var password = generatePassword(possibleChars);
-  // const charset = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
