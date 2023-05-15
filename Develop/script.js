@@ -40,6 +40,14 @@ function generatePassword() {
     inclusions();
   }
  }
+
+ var password = "";
+
+ for (var i = 0; i < passwordLength; i++) {
+  password += possibleChars.charAt(Math.floor(Math.random() * possibleChars.length));
+ }
+
+ return password;
 }
 
 function writePassword() {
