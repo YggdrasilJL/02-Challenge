@@ -5,7 +5,7 @@ function generatePassword() {
   var passwordLength = prompt("Password length? Choose 8-128.");
   var possibleChars = "";
 
-  if (passwordLength < 8 || passwordLength > 128) {
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     alert("Please choose a number between 8-128");
     return generatePassword(); //This fixed the bug where the 'confirm(s)' was running multiple times due to incorrect requirement inputs.
   }
@@ -37,7 +37,7 @@ function generatePassword() {
 
   if (possibleChars === "") {
     alert("Please include at least one of the character types.");
-    inclusions();
+    return inclusions();
   }
  }
 
