@@ -17,13 +17,15 @@ with a few conditions the user had to select.
 
 ## Usage
 
-1. Click "Generate Password"
+1. Go to [this](https://yggdrasiljl.github.io/password-generator/) site
 
-2. Put desired number in the prompt
+2. Click "Generate Password"
 
-3. go through the confirmations to create your password (The more you use, the stronger the password)
+3. Put desired number in the prompt
 
-4. Copy password
+4. go through the confirmations to create your password (The more you use, the stronger the password)
+
+5. Copy password
 
 
 
