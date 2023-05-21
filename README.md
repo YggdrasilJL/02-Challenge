@@ -25,6 +25,12 @@ with a few conditions the user had to select.
 
 4. Copy password
 
+
+
+## Screenshot
+
+![Screenshot of Password Generator project.](Assets/03-javascript-homework-demo.png)
+
 # Author
 
 Jacob Lowther
