@@ -31,7 +31,7 @@ with a few conditions the user had to select.
 
 ## Screenshot
 
-![Screenshot of Password Generator project.](Assets/03-javascript-homework-demo.png)
+![Screenshot of Password Generator project.](Assets/images/03-challengeCompleted.png)
 
 # Author
 
